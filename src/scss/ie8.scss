@@ -1,0 +1,165 @@
+@import "bourbon/bourbon";
+
+
+$GREY:#eee;
+$VDARKGREY: #333;
+$MIDGREY: #ababab;
+$RED: rgb(176, 36, 39);
+$RED_T: rgba(176, 36, 39, 0.8);
+
+$XL: 1200px;
+$L: 900px;
+$M: 600px;
+$S: 300px;
+
+$content-width: 1000px;
+$outer-gutter: 15px;
+$inner-gutter: 25px;
+
+$title-font: "Libra Baskerville", serif;
+$body-font: "Lato", Arial, sans-serif;
+
+@mixin respondTo($size){
+  @content;
+}
+
+strong, .bold{
+  font-weight:bold;
+  color:black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Lato", Arial, sans-serif;
+  font-size:18px;
+  line-height: 1.5em;
+  color: $VDARKGREY;
+  margin:0;
+
+}
+
+header{
+  background-color: $RED;
+  color: white;
+  text-align:center;
+  padding:$outer-gutter;
+  font-family: $title-font;
+
+  h1{
+    margin-bottom:$outer-gutter;
+    font-size:50px;
+  }
+
+  h2{
+    font-size:30px;
+  }
+}
+
+.letter{
+  margin:0 auto;
+  width:100%;
+  overflow: hidden;
+  max-width: $content-width;
+  padding:$outer-gutter;
+ background-color: white;
+  background-color: rgba(255,255,255,0.8);
+
+  @include respondTo($L){
+    padding: 0;
+  }
+
+  .col {
+    box-sizing: border-box;
+    @include respondTo($L){
+      width:50%;
+      text-align:justify;
+
+      &.left{
+        float:left;
+        padding:0 $inner-gutter 0 $outer-gutter;
+        border-right:1px solid $GREY;
+      }
+
+      &.right{
+        float:right;
+        padding:0 $outer-gutter 0 $inner-gutter;
+      }
+    }
+  }
+
+}
+
+ol{
+  padding-left:20px;
+}
+
+li{
+  margin:0.5em 0;
+}
+
+li > ol{
+  list-style-type: lower-roman;
+}
+
+.bold{
+  font-weight:bold;
+}
+
+.signatories{
+  background-color: $MIDGREY;
+  color:white;
+
+  ul, p, h3 {
+    display: block;
+    max-width: $content-width;
+    padding:0 $outer-gutter;
+    margin:1em auto;
+
+    @include respondTo($L){
+    }
+  }
+
+  h3{
+    padding-top:1em;
+    margin: 0 auto;
+  }
+
+  ul{
+    list-style-type: none;
+  }
+
+  li{
+    font-size:14px;
+    margin:0;
+    line-height: 1.5em;
+  }
+
+  li .name{
+    font-weight:bold;
+    padding-right:0.4em;
+    font-size:16px;
+  }
+
+  .footnote {
+    font-size:0.7em;
+    margin:0 auto;
+    padding:1em $outer-gutter;
+  }
+}
+
+.image{
+  display:none;
+  height:180px;
+  width:100%;
+  background: url(images/life-vest2.jpg) top left no-repeat;
+  background-size:100%;
+  background-attachment: fixed;
+  opacity:0.5;
+
+  @include respondTo($L){
+    display: block;
+  }
+}

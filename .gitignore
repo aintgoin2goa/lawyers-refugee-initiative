@@ -1,0 +1,7 @@
+# Created by .ignore support plugin (hsz.mobi)
+.env
+node_modules
+dist/js
+dist/index.html
+dist/main.css
+dist/ie8.css

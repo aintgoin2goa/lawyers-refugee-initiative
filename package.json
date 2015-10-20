@@ -1,0 +1,26 @@
+{
+  "name": "refugeeswelcome",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aintgoin2goa/refugeeswelcome.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aintgoin2goa/refugeeswelcome/issues"
+  },
+  "homepage": "https://github.com/aintgoin2goa/refugeeswelcome",
+  "devDependencies": {
+    "aws-sdk": "^2.2.0",
+    "colors": "^1.1.2",
+    "dotenv": "^1.2.0",
+    "node-sass": "^3.3.2",
+    "static-server": "^2.0.0"
+  }
+}
