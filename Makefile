@@ -1,7 +1,7 @@
 .PHONY: test
 
 clean:
-	rn -rf node_modules/
+	rm -rf node_modules/
 
 install:
 	npm install
